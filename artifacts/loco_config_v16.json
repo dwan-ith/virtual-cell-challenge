@@ -1,0 +1,10 @@
+{
+  "weights": {"stat": 1.0, "resid": 0.0, "stack": 0.0},
+  "calibration": {"power": 1.0, "gain": 1.8, "threshold": 0.0, "q_threshold": 0.25},
+  "shared_mix": 0.0,
+  "use_alpha": false,
+  "basal_gate_cpm": 5.0,
+  "james_stein": false,
+  "default_conservation": 0.45,
+  "holdout": ["replogle_gw/RPE1"]
+}

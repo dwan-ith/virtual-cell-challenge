@@ -1,0 +1,45 @@
+# Python & environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+.venv*/
+venv/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual Cell Challenge Data & Model Weights (>100MB exceeds GitHub push limits)
+data/
+artifacts/stores/
+*.h5ad
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.npz
+*.npy
+*.parquet
+*.tar.gz
+*.csv.gz
+
+# Binaries & external tools
+tools/
+*.exe
+
+# Execution logs & errors
+*.log
+*.err
+
+# Embedded external repos
+sidechain/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

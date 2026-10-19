@@ -1,0 +1,21 @@
+{
+  "statistical": {
+    "n_pairs": 24.0,
+    "delta_cosine": 0.6512233704903444,
+    "topk20_overlap": 0.4020833333333333,
+    "delta_mae": 0.666652741531531
+  },
+  "hybrid": {
+    "n_pairs": 24.0,
+    "delta_cosine": 0.6537591838388721,
+    "topk20_overlap": 0.39375,
+    "delta_mae": 0.6655044630169868
+  },
+  "weights": {
+    "stat": 1.0,
+    "resid": 0.5,
+    "stack": 0.0,
+    "heldout_delta_cosine": 0.6537591838388721
+  },
+  "improvement_delta_cosine": 0.0025358133485277046
+}

@@ -1,0 +1,18 @@
+{
+  "holdout": [
+    "vcc2025/H1"
+  ],
+  "weights": {
+    "stat": 1.0,
+    "resid": 0.0,
+    "stack": 0.0
+  },
+  "calibration": {
+    "threshold": 0.0,
+    "gain": 3.7,
+    "power": 1.0,
+    "q_threshold": 0.0
+  },
+  "shared_mix": 0.0,
+  "use_alpha": false
+}

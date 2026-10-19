@@ -1,0 +1,16 @@
+{
+  "pds_official_thinned": 0.8192307692307693,
+  "n": 40,
+  "worst": [
+    "BECN1",
+    "CYFIP1",
+    "LBR",
+    "JMJD1C",
+    "COASY",
+    "UGDH",
+    "ZNF850",
+    "APOE",
+    "DPF2",
+    "CREM"
+  ]
+}

@@ -1,0 +1,17 @@
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+scikit-learn>=1.3
+torch>=2.0
+anndata>=0.10
+scanpy>=1.9
+h5py>=3.8
+tqdm>=4.65
+
+# --- Challenge tooling (official) ---
+# vcc-cli          # `vcc` CLI: datasets download / prep / submit (auth via `vcc login`)
+# cell-eval2       # official scorer; local metrics.py mirrors its vcc2026 profile
+
+# --- Optional third ensemble member ---
+# arc-stack        # Stack ICL foundation model (pip install arc-stack)
+# huggingface_hub  # checkpoint downloads for Stack-Large-Aligned

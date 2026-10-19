@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CLI reference | VCC CLI</title>
+    <meta name="description" content="Submitting with the Virtual Cell Challenge CLI">
+    <meta name="generator" content="VitePress v1.6.4">
+    <link rel="preload stylesheet" href="/assets/style.C3TUMUFU.css" as="style">
+    <link rel="preload stylesheet" href="/vp-icons.css" as="style">
+    
+    <script type="module" src="/assets/app.D0hLRD4K.js"></script>
+    <link rel="preload" href="/assets/inter-roman-latin.Di8DUHzh.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="modulepreload" href="/assets/chunks/theme.n705p2xM.js">
+    <link rel="modulepreload" href="/assets/chunks/framework.mRCPFc5l.js">
+    <link rel="modulepreload" href="/assets/cli-reference.md.2oej_qOS.lean.js">
+    <script id="check-dark-mode">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"auto",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+    <script id="check-mac-os">document.documentElement.classList.toggle("mac",/Mac|iPhone|iPod|iPad/i.test(navigator.platform));</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-7444b867><!--[--><!--]--><!--[--><span tabindex="-1" data-v-25e7374c></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-25e7374c>Skip to content</a><!--]--><!----><header class="VPNav" data-v-7444b867 data-v-bf4cbd47><div class="VPNavBar" data-v-bf4cbd47 data-v-c14d81c4><div class="wrapper" data-v-c14d81c4><div class="container" data-v-c14d81c4><div class="title" data-v-c14d81c4><div class="VPNavBarTitle" data-v-c14d81c4 data-v-64b165c8><a class="title" href="/" data-v-64b165c8><!--[--><!--]--><!----><span data-v-64b165c8>VCC CLI Guide</span><!--[--><!--]--></a></div></div><div class="content" data-v-c14d81c4><div class="content-body" data-v-c14d81c4><!--[--><!--]--><div class="VPNavBarSearch search" data-v-c14d81c4><!--[--><!----><div id="local-search"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><span class="vp-icon DocSearch-Search-Icon"></span><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><kbd class="DocSearch-Button-Key"></kbd><kbd class="DocSearch-Button-Key">K</kbd></span></button></div><!--]--></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-c14d81c4 data-v-79daf4de><span id="main-nav-aria-label" class="visually-hidden" data-v-79daf4de> Main Navigation </span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/" tabindex="0" data-v-79daf4de data-v-64011df0><!--[--><span data-v-64011df0>Guide</span><!--]--></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink active" href="/cli-reference" tabindex="0" data-v-79daf4de data-v-64011df0><!--[--><span data-v-64011df0>Command reference</span><!--]--></a><!--]--><!--[--><a class="VPLink link vp-external-link-icon VPNavBarMenuLink" href="https://pypi.org/project/vcc-cli/" target="_blank" rel="noreferrer" tabindex="0" data-v-79daf4de data-v-64011df0><!--[--><span data-v-64011df0>PyPI</span><!--]--></a><!--]--><!--[--><a class="VPLink link vp-external-link-icon VPNavBarMenuLink" href="https://virtualcellchallenge.org" target="_blank" rel="noreferrer" tabindex="0" data-v-79daf4de data-v-64011df0><!--[--><span data-v-64011df0>Challenge portal</span><!--]--></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-c14d81c4 data-v-638544fd><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-638544fd data-v-5dc3529b data-v-dd0e6b3f><span class="check" data-v-dd0e6b3f><span class="icon" data-v-dd0e6b3f><!--[--><span class="vpi-sun sun" data-v-5dc3529b></span><span class="vpi-moon moon" data-v-5dc3529b></span><!--]--></span></span></button></div><div class="VPSocialLinks VPNavBarSocialLinks social-links" data-v-c14d81c4 data-v-7b851c63 data-v-1f9b40c6><!--[--><a class="VPSocialLink no-icon" href="https://discord.com/invite/f2aWGPXwej" aria-label="discord" target="_blank" rel="noopener" data-v-1f9b40c6 data-v-6c4d972c><span class="vpi-social-discord"></span></a><!--]--></div><div class="VPFlyout VPNavBarExtra extra" data-v-c14d81c4 data-v-ca9e80ec data-v-2ca0e233><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-2ca0e233><span class="vpi-more-horizontal icon" data-v-2ca0e233></span></button><div class="menu" data-v-2ca0e233><div class="VPMenu" data-v-2ca0e233 data-v-b7a31a82><!----><!--[--><!--[--><!----><div class="group" data-v-ca9e80ec><div class="item appearance" data-v-ca9e80ec><p class="label" data-v-ca9e80ec>Appearance</p><div class="appearance-action" data-v-ca9e80ec><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" title aria-checked="false" data-v-ca9e80ec data-v-5dc3529b data-v-dd0e6b3f><span class="check" data-v-dd0e6b3f><span class="icon" data-v-dd0e6b3f><!--[--><span class="vpi-sun sun" data-v-5dc3529b></span><span class="vpi-moon moon" data-v-5dc3529b></span><!--]--></span></span></button></div></div></div><div class="group" data-v-ca9e80ec><div class="item social-links" data-v-ca9e80ec><div class="VPSocialLinks social-links-list" data-v-ca9e80ec data-v-1f9b40c6><!--[--><a class="VPSocialLink no-icon" href="https://discord.com/invite/f2aWGPXwej" aria-label="discord" target="_blank" rel="noopener" data-v-1f9b40c6 data-v-6c4d972c><span class="vpi-social-discord"></span></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-c14d81c4 data-v-f67c97fd><span class="container" data-v-f67c97fd><span class="top" data-v-f67c97fd></span><span class="middle" data-v-f67c97fd></span><span class="bottom" data-v-f67c97fd></span></span></button></div></div></div></div><div class="divider" data-v-c14d81c4><div class="divider-line" data-v-c14d81c4></div></div></div><!----></header><div class="VPLocalNav empty fixed" data-v-7444b867 data-v-7eb26b99><div class="container" data-v-7eb26b99><!----><div class="VPLocalNavOutlineDropdown" style="--vp-vh:0px;" data-v-7eb26b99 data-v-a2492262><button data-v-a2492262>Return to top</button><!----></div></div></div><!----><div class="VPContent" id="VPContent" data-v-7444b867 data-v-25e41847><div class="VPDoc has-aside" data-v-25e41847 data-v-8de920f4><!--[--><!--]--><div class="container" data-v-8de920f4><div class="aside" data-v-8de920f4><div class="aside-curtain" data-v-8de920f4></div><div class="aside-container" data-v-8de920f4><div class="aside-content" data-v-8de920f4><div class="VPDocAside" data-v-8de920f4 data-v-bb777e34><!--[--><!--]--><!--[--><!--]--><nav aria-labelledby="doc-outline-aria-label" class="VPDocAsideOutline" data-v-bb777e34 data-v-48d42369><div class="content" data-v-48d42369><div class="outline-marker" data-v-48d42369></div><div aria-level="2" class="outline-title" id="doc-outline-aria-label" role="heading" data-v-48d42369>On this page</div><ul class="VPDocOutlineItem root" data-v-48d42369 data-v-35d1e26b><!--[--><!--]--></ul></div></nav><!--[--><!--]--><div class="spacer" data-v-bb777e34></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-8de920f4><div class="content-container" data-v-8de920f4><!--[--><!--]--><main class="main" data-v-8de920f4><div style="position:relative;" class="vp-doc _cli-reference" data-v-8de920f4><div><h1 id="cli-reference" tabindex="-1">CLI reference <a class="header-anchor" href="#cli-reference" aria-label="Permalink to &quot;CLI reference&quot;">​</a></h1><p>Every command&#39;s flags, defaults and help text, taken straight from the CLI itself. This page is generated from <code>vcc --help</code>, so it cannot drift from the code.</p><p>Running <code>vcc &lt;command&gt; --help</code> in your own terminal shows exactly the same thing.</p><h2 id="vcc" tabindex="-1"><code>vcc</code> <a class="header-anchor" href="#vcc" aria-label="Permalink to &quot;`vcc`&quot;">​</a></h2><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc [OPTIONS] COMMAND [ARGS]...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  vcc — submit predictions to the Virtual Cell Challenge.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Run `vcc version` for version details, or `vcc COMMAND --help` for a</span></span>
+<span class="line"><span>  command.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --json           Emit machine-readable JSON instead of human-readable text.</span></span>
+<span class="line"><span>  --profile TEXT   Named credential profile [env: VCC_PROFILE].</span></span>
+<span class="line"><span>  --endpoint TEXT  Base URL of the VCC site to talk to [env: VCC_ENDPOINT].</span></span>
+<span class="line"><span>  --version        Show the vcc version and exit.</span></span>
+<span class="line"><span>  -h, --help       Show this message and exit.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Commands:</span></span>
+<span class="line"><span>  datasets  List and download Virtual Cell Challenge reference data.</span></span>
+<span class="line"><span>  login     Authenticate with a VCC API token.</span></span>
+<span class="line"><span>  logout    Remove the stored credential for the active profile.</span></span>
+<span class="line"><span>  prep      Validate, slim, normalize, and package an .h5ad into a .vcc.</span></span>
+<span class="line"><span>  sample    Generate a random, valid dummy prediction for testing `vcc...</span></span>
+<span class="line"><span>  skill     Install the VCC agent skill into your coding agent (Claude...</span></span>
+<span class="line"><span>  status    Show the status (and scores, once published) of one submission.</span></span>
+<span class="line"><span>  submit    Upload a prediction and start scoring.</span></span>
+<span class="line"><span>  version   Print the vcc version.</span></span>
+<span class="line"><span>  whoami    Show the authenticated account, team, and whether you can...</span></span></code></pre></div><h3 id="vcc-datasets" tabindex="-1"><code>vcc datasets</code> <a class="header-anchor" href="#vcc-datasets" aria-label="Permalink to &quot;`vcc datasets`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc datasets [OPTIONS] COMMAND [ARGS]...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  List and download Virtual Cell Challenge reference data.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  -h, --help  Show this message and exit.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Commands:</span></span>
+<span class="line"><span>  download  Download a dataset by id (see `vcc datasets list`).</span></span>
+<span class="line"><span>  list      Show which datasets you can download.</span></span></code></pre></div><h4 id="vcc-datasets-download" tabindex="-1"><code>vcc datasets download</code> <a class="header-anchor" href="#vcc-datasets-download" aria-label="Permalink to &quot;`vcc datasets download`&quot;">​</a></h4><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc datasets download [OPTIONS] DATASET_ID</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Download a dataset by id (see `vcc datasets list`).</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Resumes an interrupted download, re-mints the link if it expires mid-</span></span>
+<span class="line"><span>  transfer, and verifies the finished file against the checksum the server</span></span>
+<span class="line"><span>  advertises.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  -o, --output FILE    Write to this exact path instead of &lt;dir&gt;/&lt;filename&gt;.</span></span>
+<span class="line"><span>  -d, --dir DIRECTORY  Directory to download into [default: $VCC_DATA_DIR or</span></span>
+<span class="line"><span>                       cwd].</span></span>
+<span class="line"><span>  -f, --force          Re-download even if the file is already present and</span></span>
+<span class="line"><span>                       verified.</span></span>
+<span class="line"><span>  --endpoint TEXT      Base URL to query.</span></span>
+<span class="line"><span>  --profile TEXT       Credential profile to use.</span></span>
+<span class="line"><span>  --json               Emit machine-readable JSON instead of human-readable</span></span>
+<span class="line"><span>                       text.</span></span>
+<span class="line"><span>  -h, --help           Show this message and exit.</span></span></code></pre></div><h4 id="vcc-datasets-list" tabindex="-1"><code>vcc datasets list</code> <a class="header-anchor" href="#vcc-datasets-list" aria-label="Permalink to &quot;`vcc datasets list`&quot;">​</a></h4><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc datasets list [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Show which datasets you can download.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --endpoint TEXT  Base URL to query.</span></span>
+<span class="line"><span>  --profile TEXT   Credential profile to use.</span></span>
+<span class="line"><span>  --json           Emit machine-readable JSON instead of human-readable text.</span></span>
+<span class="line"><span>  -h, --help       Show this message and exit.</span></span></code></pre></div><h3 id="vcc-login" tabindex="-1"><code>vcc login</code> <a class="header-anchor" href="#vcc-login" aria-label="Permalink to &quot;`vcc login`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc login [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Authenticate with a VCC API token.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Tokens are created in the web app on your Credentials page — the CLI cannot</span></span>
+<span class="line"><span>  mint one (generating a token there revokes any previous token). Provide it</span></span>
+<span class="line"><span>  via --token-stdin, --token, or the VCC_TOKEN environment variable.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --token TEXT       The API token. Visible in your shell history and process</span></span>
+<span class="line"><span>                     list — prefer --token-stdin.</span></span>
+<span class="line"><span>  --token-stdin      Read the API token from stdin (one line). Best for piping</span></span>
+<span class="line"><span>                     from a secret manager.</span></span>
+<span class="line"><span>  --endpoint TEXT    Base URL to log in against (remembered for this profile).</span></span>
+<span class="line"><span>  --store-plaintext  If no secure OS keychain exists, save the token to a 0600</span></span>
+<span class="line"><span>                     file instead of refusing.</span></span>
+<span class="line"><span>  --no-store         Validate the token but store nothing (use VCC_TOKEN each</span></span>
+<span class="line"><span>                     run).</span></span>
+<span class="line"><span>  --json             Emit machine-readable JSON instead of human-readable</span></span>
+<span class="line"><span>                     text.</span></span>
+<span class="line"><span>  -h, --help         Show this message and exit.</span></span></code></pre></div><h3 id="vcc-logout" tabindex="-1"><code>vcc logout</code> <a class="header-anchor" href="#vcc-logout" aria-label="Permalink to &quot;`vcc logout`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc logout [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Remove the stored credential for the active profile.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Only touches this profile, and cannot revoke the token itself — revoke it in</span></span>
+<span class="line"><span>  the web app if it may have leaked.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --profile TEXT  Credential profile to log out of.</span></span>
+<span class="line"><span>  --json          Emit machine-readable JSON instead of human-readable text.</span></span>
+<span class="line"><span>  -h, --help      Show this message and exit.</span></span></code></pre></div><h3 id="vcc-prep" tabindex="-1"><code>vcc prep</code> <a class="header-anchor" href="#vcc-prep" aria-label="Permalink to &quot;`vcc prep`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc prep [OPTIONS] [INPUT.h5ad]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Validate, slim, normalize, and package an .h5ad into a .vcc.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Native reimplementation of `cell-eval prep` — no network calls, no cell-eval</span></span>
+<span class="line"><span>  dependency. Catches locally the same errors the server would reject.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  -i, --input PATH                Path to the input .h5ad (alternative to the</span></span>
+<span class="line"><span>                                  positional argument).</span></span>
+<span class="line"><span>  -g, --genes PATH                Headerless CSV of expected gene symbols, in</span></span>
+<span class="line"><span>                                  order.</span></span>
+<span class="line"><span>  --perts PATH                    pert_counts.csv from the controls bundle —</span></span>
+<span class="line"><span>                                  the official perturbation list, checked per</span></span>
+<span class="line"><span>                                  context.</span></span>
+<span class="line"><span>  --verify-targets / --no-verify-targets</span></span>
+<span class="line"><span>                                  Check each context predicts exactly its</span></span>
+<span class="line"><span>                                  official perturbations. Needs --perts.</span></span>
+<span class="line"><span>                                  [default: verify-targets]</span></span>
+<span class="line"><span>  --check-cell-counts / --no-check-cell-counts</span></span>
+<span class="line"><span>                                  Require each perturbation to have exactly</span></span>
+<span class="line"><span>                                  the official number of cells.  [default:</span></span>
+<span class="line"><span>                                  check-cell-counts]</span></span>
+<span class="line"><span>  --cells-per-pert INTEGER        Cells required per perturbation (the panel&#39;s</span></span>
+<span class="line"><span>                                  count). An n_cells column in --perts wins</span></span>
+<span class="line"><span>                                  over it; -1 means no built-in expectation.</span></span>
+<span class="line"><span>                                  [default: 400]</span></span>
+<span class="line"><span>  -o, --output PATH               Path to write the .vcc [default:</span></span>
+<span class="line"><span>                                  &lt;input&gt;.prep.vcc].</span></span>
+<span class="line"><span>  -p, --pert-col TEXT             Input column naming perturbations.</span></span>
+<span class="line"><span>                                  [default: target_gene]</span></span>
+<span class="line"><span>  -c, --celltype-col TEXT         Input column naming cell type (optional).</span></span>
+<span class="line"><span>  -n, --ntc-name TEXT             Negative-control label expected in the</span></span>
+<span class="line"><span>                                  perturbation column.  [default: non-</span></span>
+<span class="line"><span>                                  targeting]</span></span>
+<span class="line"><span>  -P, --output-pert-col TEXT      Perturbation column name in the output.</span></span>
+<span class="line"><span>                                  [default: target_gene]</span></span>
+<span class="line"><span>  -C, --output-celltype-col TEXT  Cell-type column name in the output.</span></span>
+<span class="line"><span>                                  [default: celltype]</span></span>
+<span class="line"><span>  --context-col TEXT              Input column naming the cell context</span></span>
+<span class="line"><span>                                  (A/B/C), as in the control files.  [default:</span></span>
+<span class="line"><span>                                  context]</span></span>
+<span class="line"><span>  --contexts TEXT                 Comma-separated contexts a submission must</span></span>
+<span class="line"><span>                                  cover; empty disables the check.  [default:</span></span>
+<span class="line"><span>                                  A,B,C]</span></span>
+<span class="line"><span>  -e, --encoding [32|64]          Float bit width for X.  [default: 32]</span></span>
+<span class="line"><span>  --allow-discrete                Legacy: with --no-require-counts, keep</span></span>
+<span class="line"><span>                                  integer counts as-is instead of log-</span></span>
+<span class="line"><span>                                  normalizing.</span></span>
+<span class="line"><span>  --require-counts / --no-require-counts</span></span>
+<span class="line"><span>                                  Require raw integer counts (2026 scores in</span></span>
+<span class="line"><span>                                  counts space). --no-require-counts restores</span></span>
+<span class="line"><span>                                  log-normalization.  [default: require-</span></span>
+<span class="line"><span>                                  counts]</span></span>
+<span class="line"><span>  --reject-controls / --allow-controls</span></span>
+<span class="line"><span>                                  Reject submitted control cells (scoring uses</span></span>
+<span class="line"><span>                                  the held-out controls, never yours).</span></span>
+<span class="line"><span>                                  [default: reject-controls]</span></span>
+<span class="line"><span>  --expected-gene-dim INTEGER     Expected gene dimension; -1 disables the</span></span>
+<span class="line"><span>                                  check.  [default: 18533]</span></span>
+<span class="line"><span>  --max-cell-dim INTEGER          Maximum cell count; -1 disables the cap.</span></span>
+<span class="line"><span>                                  [default: 400000]</span></span>
+<span class="line"><span>  --max-nnz INTEGER               Maximum nonzero values (density cap); -1</span></span>
+<span class="line"><span>                                  disables the cap.  [default: the scoring</span></span>
+<span class="line"><span>                                  hardware&#39;s limit]</span></span>
+<span class="line"><span>  --max-counts-per-cell INTEGER   Maximum per-cell count total (sum over</span></span>
+<span class="line"><span>                                  genes); -1 disables the cap.  [default:</span></span>
+<span class="line"><span>                                  1000000]</span></span>
+<span class="line"><span>  --dry-run                       Validate and report what prep would do,</span></span>
+<span class="line"><span>                                  without writing output.</span></span>
+<span class="line"><span>  -f, --force                     Overwrite the output file if it already</span></span>
+<span class="line"><span>                                  exists.</span></span>
+<span class="line"><span>  --json                          Emit machine-readable JSON instead of human-</span></span>
+<span class="line"><span>                                  readable text.</span></span>
+<span class="line"><span>  -h, --help                      Show this message and exit.</span></span></code></pre></div><h3 id="vcc-sample" tabindex="-1"><code>vcc sample</code> <a class="header-anchor" href="#vcc-sample" aria-label="Permalink to &quot;`vcc sample`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc sample [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Generate a random, valid dummy prediction for testing `vcc submit`.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Builds synthetic random counts over the given gene list — one cell group per</span></span>
+<span class="line"><span>  perturbation — and packages a submittable .vcc (same format as `vcc prep`).</span></span>
+<span class="line"><span>  The result is minimal but *complete*: every official perturbation from</span></span>
+<span class="line"><span>  `pert_counts.csv`, in every context, with exactly the 400 cells each the</span></span>
+<span class="line"><span>  panel uses, so scoring accepts it. The values are noise, so it is for</span></span>
+<span class="line"><span>  pipeline testing (upload → scoring), NOT for scoring well.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Both -g and -p come from `vcc datasets download controls`.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  -g, --genes PATH          Headerless CSV of gene symbols (the official VCC</span></span>
+<span class="line"><span>                            gene list, from `vcc datasets download`).</span></span>
+<span class="line"><span>                            [required]</span></span>
+<span class="line"><span>  -o, --output PATH         Where to write the sample [default: sample.vcc, or</span></span>
+<span class="line"><span>                            sample.h5ad with --h5ad].</span></span>
+<span class="line"><span>  -p, --perts PATH          pert_counts.csv from the controls bundle — the</span></span>
+<span class="line"><span>                            official perturbation list. Required: a sample</span></span>
+<span class="line"><span>                            built from anything else is rejected by scoring.</span></span>
+<span class="line"><span>                            [required]</span></span>
+<span class="line"><span>  --cells-per-pert INTEGER  Cells per perturbation [default: 400 with --full,</span></span>
+<span class="line"><span>                            5 with --no-full]. An n_cells column in --perts</span></span>
+<span class="line"><span>                            still wins.</span></span>
+<span class="line"><span>  --full / --no-full        Give each perturbation the official 400 cells.</span></span>
+<span class="line"><span>                            --no-full makes a small, DELIBERATELY INVALID file</span></span>
+<span class="line"><span>                            that scoring will reject — upload-path testing</span></span>
+<span class="line"><span>                            only.  [default: full]</span></span>
+<span class="line"><span>  --ntc-cells INTEGER       Non-targeting control cell count [default:</span></span>
+<span class="line"><span>                            --cells-per-pert]. Only for the legacy --contexts</span></span>
+<span class="line"><span>                            &#39;&#39; shape.</span></span>
+<span class="line"><span>  --genes-per-cell INTEGER  Nonzero genes per cell (controls sparsity and file</span></span>
+<span class="line"><span>                            size).  [default: 300]</span></span>
+<span class="line"><span>  --context-col TEXT        Context column name to write into the sample.</span></span>
+<span class="line"><span>                            [default: context]</span></span>
+<span class="line"><span>  --contexts TEXT           Comma-separated contexts the sample must cover;</span></span>
+<span class="line"><span>                            empty disables contexts.  [default: A,B,C]</span></span>
+<span class="line"><span>  --max-cell-dim INTEGER    Maximum total cells; -1 disables the cap (raise it</span></span>
+<span class="line"><span>                            for a very large --full sample).  [default:</span></span>
+<span class="line"><span>                            400000]</span></span>
+<span class="line"><span>  --seed INTEGER            RNG seed. Omitted, each run generates a different</span></span>
+<span class="line"><span>                            sample (and prints the seed it used); pass that</span></span>
+<span class="line"><span>                            value back to reproduce one exactly.</span></span>
+<span class="line"><span>  --h5ad                    Write a raw .h5ad instead of packaging a .vcc.</span></span>
+<span class="line"><span>  -f, --force               Overwrite the output file if it already exists.</span></span>
+<span class="line"><span>  --json                    Emit machine-readable JSON instead of human-</span></span>
+<span class="line"><span>                            readable text.</span></span>
+<span class="line"><span>  -h, --help                Show this message and exit.</span></span></code></pre></div><h3 id="vcc-skill" tabindex="-1"><code>vcc skill</code> <a class="header-anchor" href="#vcc-skill" aria-label="Permalink to &quot;`vcc skill`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc skill [OPTIONS] COMMAND [ARGS]...</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Install the VCC agent skill into your coding agent (Claude Code / Codex /</span></span>
+<span class="line"><span>  Gemini).</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  -h, --help  Show this message and exit.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Commands:</span></span>
+<span class="line"><span>  install    Copy the bundled skill into your agent&#39;s skills directory.</span></span>
+<span class="line"><span>  path       Print where `vcc skill install` would put the skill for an...</span></span>
+<span class="line"><span>  uninstall  Remove a skill directory previously installed by vcc (leaves...</span></span></code></pre></div><h4 id="vcc-skill-install" tabindex="-1"><code>vcc skill install</code> <a class="header-anchor" href="#vcc-skill-install" aria-label="Permalink to &quot;`vcc skill install`&quot;">​</a></h4><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc skill install [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Copy the bundled skill into your agent&#39;s skills directory.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  The skill ships inside the CLI but agents don&#39;t read skills from Python</span></span>
+<span class="line"><span>  packages, so this copies it where the agent looks. Restart your agent</span></span>
+<span class="line"><span>  session (or /reload) afterward so it picks up the new skill.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --agent [auto|claude|codex|gemini|all]</span></span>
+<span class="line"><span>                                  Which agent(s) to install into. &#39;auto&#39; =</span></span>
+<span class="line"><span>                                  every agent already present on the machine</span></span>
+<span class="line"><span>                                  (falls back to claude if none); &#39;all&#39; = all</span></span>
+<span class="line"><span>                                  three regardless.  [default: auto]</span></span>
+<span class="line"><span>  --dir PATH                      Install into this exact directory instead of</span></span>
+<span class="line"><span>                                  the per-agent default.</span></span>
+<span class="line"><span>  --force                         Overwrite a target directory vcc didn&#39;t</span></span>
+<span class="line"><span>                                  create.</span></span>
+<span class="line"><span>  --json                          Emit machine-readable JSON instead of human-</span></span>
+<span class="line"><span>                                  readable text.</span></span>
+<span class="line"><span>  -h, --help                      Show this message and exit.</span></span></code></pre></div><h4 id="vcc-skill-path" tabindex="-1"><code>vcc skill path</code> <a class="header-anchor" href="#vcc-skill-path" aria-label="Permalink to &quot;`vcc skill path`&quot;">​</a></h4><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc skill path [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Print where `vcc skill install` would put the skill for an agent (installs</span></span>
+<span class="line"><span>  nothing).</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --agent [claude|codex|gemini]  Which agent&#39;s skills directory to print.</span></span>
+<span class="line"><span>                                 [default: claude]</span></span>
+<span class="line"><span>  --json                         Emit machine-readable JSON instead of human-</span></span>
+<span class="line"><span>                                 readable text.</span></span>
+<span class="line"><span>  -h, --help                     Show this message and exit.</span></span></code></pre></div><h4 id="vcc-skill-uninstall" tabindex="-1"><code>vcc skill uninstall</code> <a class="header-anchor" href="#vcc-skill-uninstall" aria-label="Permalink to &quot;`vcc skill uninstall`&quot;">​</a></h4><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc skill uninstall [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Remove a skill directory previously installed by vcc (leaves foreign dirs</span></span>
+<span class="line"><span>  untouched).</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --agent [auto|claude|codex|gemini|all]</span></span>
+<span class="line"><span>                                  Which agent(s) to remove from. &#39;auto&#39; =</span></span>
+<span class="line"><span>                                  every agent present on the machine.</span></span>
+<span class="line"><span>                                  [default: auto]</span></span>
+<span class="line"><span>  --dir PATH                      Remove from this exact directory instead of</span></span>
+<span class="line"><span>                                  the per-agent default.</span></span>
+<span class="line"><span>  --json                          Emit machine-readable JSON instead of human-</span></span>
+<span class="line"><span>                                  readable text.</span></span>
+<span class="line"><span>  -h, --help                      Show this message and exit.</span></span></code></pre></div><h3 id="vcc-status" tabindex="-1"><code>vcc status</code> <a class="header-anchor" href="#vcc-status" aria-label="Permalink to &quot;`vcc status`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc status [OPTIONS] ENTRY_ID</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Show the status (and scores, once published) of one submission.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --wait                 Block until the submission reaches a terminal state.</span></span>
+<span class="line"><span>  --poll-interval FLOAT  Seconds between polls with --wait.  [default: 5.0]</span></span>
+<span class="line"><span>  --wait-timeout FLOAT   Give up waiting after N seconds.</span></span>
+<span class="line"><span>  --endpoint TEXT        Base URL to query.</span></span>
+<span class="line"><span>  --profile TEXT         Credential profile to use.</span></span>
+<span class="line"><span>  --json                 Emit machine-readable JSON instead of human-readable</span></span>
+<span class="line"><span>                         text.</span></span>
+<span class="line"><span>  -h, --help             Show this message and exit.</span></span></code></pre></div><h3 id="vcc-submit" tabindex="-1"><code>vcc submit</code> <a class="header-anchor" href="#vcc-submit" aria-label="Permalink to &quot;`vcc submit`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc submit [OPTIONS] FILE</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Upload a prediction and start scoring.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  FILE may be a .vcc (validated and uploaded as-is) or a raw .h5ad, which is</span></span>
+<span class="line"><span>  prepped first — pass -g/--genes and --perts (or --no-verify-targets to skip</span></span>
+<span class="line"><span>  the perturbation check).</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  -m, --model-name TEXT           Name for this model on the leaderboard</span></span>
+<span class="line"><span>                                  (required).</span></span>
+<span class="line"><span>  -d, --description TEXT          Optional description (max 2000 chars).</span></span>
+<span class="line"><span>  -g, --genes PATH                Gene list, if FILE is a raw .h5ad that needs</span></span>
+<span class="line"><span>                                  prepping.</span></span>
+<span class="line"><span>  --perts PATH                    pert_counts.csv, if FILE is a raw .h5ad —</span></span>
+<span class="line"><span>                                  the official list prep checks targets</span></span>
+<span class="line"><span>                                  against (required by default when prepping;</span></span>
+<span class="line"><span>                                  see --no-verify-targets).</span></span>
+<span class="line"><span>  --verify-targets / --no-verify-targets</span></span>
+<span class="line"><span>                                  When prepping a raw .h5ad, check each</span></span>
+<span class="line"><span>                                  context predicts exactly its official</span></span>
+<span class="line"><span>                                  perturbations. Needs --perts.  [default:</span></span>
+<span class="line"><span>                                  verify-targets]</span></span>
+<span class="line"><span>  --check-cell-counts / --no-check-cell-counts</span></span>
+<span class="line"><span>                                  When prepping a raw .h5ad, require each</span></span>
+<span class="line"><span>                                  perturbation to have exactly the official</span></span>
+<span class="line"><span>                                  number of cells (400).  [default: check-</span></span>
+<span class="line"><span>                                  cell-counts]</span></span>
+<span class="line"><span>  --wait                          Block until scoring reaches a terminal</span></span>
+<span class="line"><span>                                  state.</span></span>
+<span class="line"><span>  --poll-interval FLOAT           Seconds between status polls with --wait.</span></span>
+<span class="line"><span>                                  [default: 5.0]</span></span>
+<span class="line"><span>  --wait-timeout FLOAT            Give up waiting after N seconds (the</span></span>
+<span class="line"><span>                                  submission keeps running).</span></span>
+<span class="line"><span>  --resume TEXT                   Resume an interrupted upload (optionally</span></span>
+<span class="line"><span>                                  pass its entry id).</span></span>
+<span class="line"><span>  --skip-limit-check              Skip the daily-allowance pre-check.</span></span>
+<span class="line"><span>  -f, --force                     Overwrite an existing prep output.</span></span>
+<span class="line"><span>  --endpoint TEXT                 Base URL to submit to.</span></span>
+<span class="line"><span>  --profile TEXT                  Credential profile to use.</span></span>
+<span class="line"><span>  --json                          Emit machine-readable JSON instead of human-</span></span>
+<span class="line"><span>                                  readable text.</span></span>
+<span class="line"><span>  -h, --help                      Show this message and exit.</span></span></code></pre></div><h3 id="vcc-version" tabindex="-1"><code>vcc version</code> <a class="header-anchor" href="#vcc-version" aria-label="Permalink to &quot;`vcc version`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc version [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Print the vcc version.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --json      Emit machine-readable JSON instead of human-readable text.</span></span>
+<span class="line"><span>  -h, --help  Show this message and exit.</span></span></code></pre></div><h3 id="vcc-whoami" tabindex="-1"><code>vcc whoami</code> <a class="header-anchor" href="#vcc-whoami" aria-label="Permalink to &quot;`vcc whoami`&quot;">​</a></h3><div class="language-text vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">text</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Usage: vcc whoami [OPTIONS]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  Show the authenticated account, team, and whether you can submit.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Options:</span></span>
+<span class="line"><span>  --endpoint TEXT  Base URL to query (overrides the profile&#39;s stored</span></span>
+<span class="line"><span>                   endpoint).</span></span>
+<span class="line"><span>  --profile TEXT   Credential profile to inspect.</span></span>
+<span class="line"><span>  --json           Emit machine-readable JSON instead of human-readable text.</span></span>
+<span class="line"><span>  -h, --help       Show this message and exit.</span></span></code></pre></div></div></div></main><footer class="VPDocFooter" data-v-8de920f4 data-v-9f1a4103><!--[--><!--]--><!----><!----></footer><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><footer class="VPFooter" data-v-7444b867 data-v-302810ea><div class="container" data-v-302810ea><p class="message" data-v-302810ea>Virtual Cell Challenge — Arc Institute</p><p class="copyright" data-v-302810ea>© 2026 Arc Institute</p></div></footer><!--[--><!--]--></div></div>
+    <script>window.__VP_HASH_MAP__=JSON.parse("{\"cli-reference.md\":\"2oej_qOS\",\"index.md\":\"CIM6V3g5\"}");window.__VP_SITE_DATA__=JSON.parse("{\"lang\":\"en-US\",\"dir\":\"ltr\",\"title\":\"VCC CLI\",\"description\":\"Submitting with the Virtual Cell Challenge CLI\",\"base\":\"/\",\"head\":[],\"router\":{\"prefetchLinks\":true},\"appearance\":true,\"themeConfig\":{\"siteTitle\":\"VCC CLI Guide\",\"outline\":{\"level\":[2,3],\"label\":\"On this page\"},\"search\":{\"provider\":\"local\"},\"nav\":[{\"text\":\"Guide\",\"link\":\"/\"},{\"text\":\"Command reference\",\"link\":\"/cli-reference\"},{\"text\":\"PyPI\",\"link\":\"https://pypi.org/project/vcc-cli/\"},{\"text\":\"Challenge portal\",\"link\":\"https://virtualcellchallenge.org\"}],\"socialLinks\":[{\"icon\":\"discord\",\"link\":\"https://discord.com/invite/f2aWGPXwej\"}],\"footer\":{\"message\":\"Virtual Cell Challenge — Arc Institute\",\"copyright\":\"© 2026 Arc Institute\"}},\"locales\":{},\"scrollOffset\":134,\"cleanUrls\":true}");</script>
+    
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "weights": {"stat": 1.0, "resid": 0.0, "stack": 0.0},
+  "calibration": {"power": 1.0, "gain": 1.8, "threshold": 0.0, "q_threshold": 0.35},
+  "shared_mix": 0.0,
+  "use_alpha": false,
+  "basal_gate_cpm": 5.0,
+  "james_stein": false,
+  "default_conservation": 0.45,
+  "similarity_temperature": 0.1,
+  "gene_conditioned": false,
+  "adaptive_gain": {"scale": 0.7, "esm_boost": 0.0},
+  "denoise_rank": 0,
+  "beta_deshared": 0.0,
+  "holdout": ["replogle_gw/RPE1"]
+}
